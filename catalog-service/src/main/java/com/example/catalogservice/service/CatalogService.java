@@ -1,6 +1,6 @@
 package com.example.catalogservice.service;
 
-import com.example.catalogservice.jpa.CatalogEntity;
+import com.example.catalogservice.repository.CatalogEntity;
 
 public interface CatalogService {
 
