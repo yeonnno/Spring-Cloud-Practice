@@ -39,11 +39,15 @@ public class OrderServiceImpl implements OrderService{
 
     @Override
     public OrderDto getOrderByOrderId(String orderId) {
-        return null;
+
+        OrderEntity orderEntity = orderRepository.findByOrderId(orderId);
+        OrderDto orderDto = new ModelMapper().map(orderEntity, OrderDto.class);
+
+        return orderDto;
     }
 
     @Override
     public Iterable<OrderEntity> getOrdersByUserId(String userId) {
-        return null;
+        return orderRepository.findByUserId(userId);
     }
 }
